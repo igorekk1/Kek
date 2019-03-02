@@ -1,0 +1,59 @@
+#!/bin/bash
+
+cat o.1
+cat o.2
+
+cmp -l o.1 o.2
+
+wc o.2
+
+cat o.1.1
+dd if=o.1 of=o.1.1
+cmp o.1 o.1.1
+
+diff -u o.1 o.2 > diff.1
+
+tail -2 o.1
+
+head -3 o.2
+
+od o.1.1
+
+sum o.1
+
+md5sum o.1
+
+du
+
+file o.1
+
+touch o.2.2
+cat o.2.2
+
+tar -cpvf 1.tar o.1 o.2 
+
+split -l 2 o.1 o.1.
+cat o.1.aa
+cat o.1.ab
+
+mktemp
+
+sort -r o.1 > o.3
+cat o.3
+
+grep 1 o.1
+
+touch o.4
+touch o.5
+sort o.1 > o.4
+sort o.2 > o.5
+comm o.4 o.5
+
+tr "1" "q" < o.1 
+cat o.1
+
+find *.1
+
+vim
+
+
